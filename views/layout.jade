@@ -1,7 +1,7 @@
 doctype html
 html(lang='en')
   head
-    title= title
+    title Rando Corp
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width, initial-scale-=1')
     link(rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
@@ -10,4 +10,17 @@ html(lang='en')
     script(src='/javascripts/script.js')
     
   body
-    block content
+    wrapper
+      header
+        h1 Rando Corp
+        a(href='/')
+          button 'Applicant View'
+        a(href='/admin')
+          button 'Admin View'
+      
+      content
+        block content
+
+      footer
+        h3 Rando Corp
+      

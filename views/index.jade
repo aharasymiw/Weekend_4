@@ -1,5 +1,375 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+
+  h2 Please fill out an application.
+
+  form(id='form', autocomplete='on')
+    label(for='fname') What is your first name?
+    br
+    input(id='fname', type='text', name='fname', placeholder='John', autofocus, required)
+    br
+    label(for='lname') What's your last name?
+    br
+    input(id='lname', type='text', name='lname', placeholder='Doe', required)
+    br
+    label(for='job') Select the job you are applying for.
+    br
+    select(id='job', name='job', required)
+      option(value='0') Select One:
+      option(value='job1') Job 1
+      option(value='job2') Job 2
+      option(value='job3') Job 3
+      option(value='job4') Job 4
+      option(value='job5') Job 5
+      option(value='job6') Job 6
+    br
+    p Where do you want to work?  
+    label(for='remote') Remote
+    input(id='remote', type='radio', name='location', value='remote', checked)
+    label(for='specific') Specific
+    input(id='specific', type='radio', name='location', value='specific')
+    br
+    label(for='state') What state would you like to work in?
+    br
+    select(id='state', name='state')
+      option(value='0') Select One:
+      option(value='AL') Alabama
+      option(value='AK') Alaska
+      option(value='AZ') Arizona
+      option(value='AR') Arkansas
+      option(value='CA') California
+      option(value='CO') Colorado
+      option(value='CT') Connecticut
+      option(value='DE') Delaware
+      option(value='FL') Florida
+      option(value='GA') Georgia
+      option(value='HI') Hawaii
+      option(value='ID') Idaho
+      option(value='IL') Illinois
+      option(value='IN') Indiana
+      option(value='IA') Iowa
+      option(value='KS') Kansas
+      option(value='KY') Kentucky
+      option(value='LA') Louisiana
+      option(value='ME') Maine
+      option(value='MD') Maryland
+      option(value='MA') Massachusetts
+      option(value='MI') Michigan
+      option(value='MN') Minnesota
+      option(value='MS') Mississippi
+      option(value='MO') Missouri
+      option(value='MT') Montana
+      option(value='NE') Nebraska
+      option(value='NV') Nevada
+      option(value='NH') New Hampshire
+      option(value='NJ') New Jersey
+      option(value='NM') New Mexico
+      option(value='NY') New York
+      option(value='NC') North Carolina
+      option(value='ND') North Dakota
+      option(value='OH') Ohio
+      option(value='OK') Oklahoma
+      option(value='OR') Oregon
+      option(value='PA') Pennsylvania
+      option(value='RI') Rhode Island
+      option(value='SC') South Carolina
+      option(value='SD') South Dakota
+      option(value='TN') Tennessee
+      option(value='TX') Texas
+      option(value='UT') Utah
+      option(value='VT') Vermont
+      option(value='VA') Virginia
+      option(value='WA') Washington
+      option(value='WV') West Virginia
+      option(value='WI') Wisconsin
+      option(value='WY') Wyoming
+      option(value='AS') American Samoa
+      option(value='DC') District of Columbia
+      option(value='FM') Federated States of Micronesia
+      option(value='GU') Guam
+      option(value='MH') Marshall Islands
+      option(value='MP') Northern Mariana Islands
+      option(value='PW') Palau
+      option(value='PR') Puerto Rico
+      option(value='VI') Virgin Islands
+      option(value='AE') Armed Forces Africa
+      option(value='AA') Armed Forces Americas
+      option(value='AEC') Armed Forces Canada
+      option(value='AEE') Armed Forces Europe
+      option(value='AEM') Armed Forces Middle East
+      option(value='AP') Armed Forces Pacific
+    br
+    label(for='city') What city would you like to work in?
+    br
+    input(id='city', type='text', name='city', placeholder='Atlantis')
+    br
+    h3 Please fill in your previous work experience (up to three jobs), starting with the most recent.
+    br
+    h4 Most recent position, (required):
+    br
+    label(for='job1') What was your job title?
+    br
+    input(id='job1', type='text', name='job1', placeholder='Chief of Awesome', required)
+    br
+    label(for='employer1') What was the name of your employer?
+    br
+    input(id='employer1', type='text', name='employer1', placeholder='The Good Company', required)
+    br
+    label(for='state1') What state did you work in?
+    br
+    select(id='state1', name='state1', required)
+      option(value='0') Select One:
+      option(value='AL') Alabama
+      option(value='AK') Alaska
+      option(value='AZ') Arizona
+      option(value='AR') Arkansas
+      option(value='CA') California
+      option(value='CO') Colorado
+      option(value='CT') Connecticut
+      option(value='DE') Delaware
+      option(value='FL') Florida
+      option(value='GA') Georgia
+      option(value='HI') Hawaii
+      option(value='ID') Idaho
+      option(value='IL') Illinois
+      option(value='IN') Indiana
+      option(value='IA') Iowa
+      option(value='KS') Kansas
+      option(value='KY') Kentucky
+      option(value='LA') Louisiana
+      option(value='ME') Maine
+      option(value='MD') Maryland
+      option(value='MA') Massachusetts
+      option(value='MI') Michigan
+      option(value='MN') Minnesota
+      option(value='MS') Mississippi
+      option(value='MO') Missouri
+      option(value='MT') Montana
+      option(value='NE') Nebraska
+      option(value='NV') Nevada
+      option(value='NH') New Hampshire
+      option(value='NJ') New Jersey
+      option(value='NM') New Mexico
+      option(value='NY') New York
+      option(value='NC') North Carolina
+      option(value='ND') North Dakota
+      option(value='OH') Ohio
+      option(value='OK') Oklahoma
+      option(value='OR') Oregon
+      option(value='PA') Pennsylvania
+      option(value='RI') Rhode Island
+      option(value='SC') South Carolina
+      option(value='SD') South Dakota
+      option(value='TN') Tennessee
+      option(value='TX') Texas
+      option(value='UT') Utah
+      option(value='VT') Vermont
+      option(value='VA') Virginia
+      option(value='WA') Washington
+      option(value='WV') West Virginia
+      option(value='WI') Wisconsin
+      option(value='WY') Wyoming
+      option(value='AS') American Samoa
+      option(value='DC') District of Columbia
+      option(value='FM') Federated States of Micronesia
+      option(value='GU') Guam
+      option(value='MH') Marshall Islands
+      option(value='MP') Northern Mariana Islands
+      option(value='PW') Palau
+      option(value='PR') Puerto Rico
+      option(value='VI') Virgin Islands
+      option(value='AE') Armed Forces Africa
+      option(value='AA') Armed Forces Americas
+      option(value='AEC') Armed Forces Canada
+      option(value='AEE') Armed Forces Europe
+      option(value='AEM') Armed Forces Middle East
+      option(value='AP') Armed Forces Pacific
+    br
+    label(for='city1') What city did you work in?
+    br
+    input(id='city1', type='text', name='city1',  placeholder='Dinotopia', required)
+    br
+    label(for='duties1') Please briefly describe your duties.
+    br
+    textarea(id='duties1', form='form', name='duties1', rows='4', cols='50', placeholder='Breathe Deep Seek Peace.  Be Excellent To Each Other.  Etc...', required)
+    br
+    h4 Next most recent position, (suggested):
+    br
+    label(for='job2') What was your job title?
+    br
+    input(id='job2', type='text', name='job2', placeholder='Chief of Awesome')
+    br
+    label(for='employer2') What was the name of your employer?
+    br
+    input(id='employer2', type='text', name='employer2', placeholder='The Good Company')
+    br
+    label(for='state2') What state did you work in?
+    br
+    select(id='state2', name='state2')
+      option(value='0') Select One:
+      option(value='AL') Alabama
+      option(value='AK') Alaska
+      option(value='AZ') Arizona
+      option(value='AR') Arkansas
+      option(value='CA') California
+      option(value='CO') Colorado
+      option(value='CT') Connecticut
+      option(value='DE') Delaware
+      option(value='FL') Florida
+      option(value='GA') Georgia
+      option(value='HI') Hawaii
+      option(value='ID') Idaho
+      option(value='IL') Illinois
+      option(value='IN') Indiana
+      option(value='IA') Iowa
+      option(value='KS') Kansas
+      option(value='KY') Kentucky
+      option(value='LA') Louisiana
+      option(value='ME') Maine
+      option(value='MD') Maryland
+      option(value='MA') Massachusetts
+      option(value='MI') Michigan
+      option(value='MN') Minnesota
+      option(value='MS') Mississippi
+      option(value='MO') Missouri
+      option(value='MT') Montana
+      option(value='NE') Nebraska
+      option(value='NV') Nevada
+      option(value='NH') New Hampshire
+      option(value='NJ') New Jersey
+      option(value='NM') New Mexico
+      option(value='NY') New York
+      option(value='NC') North Carolina
+      option(value='ND') North Dakota
+      option(value='OH') Ohio
+      option(value='OK') Oklahoma
+      option(value='OR') Oregon
+      option(value='PA') Pennsylvania
+      option(value='RI') Rhode Island
+      option(value='SC') South Carolina
+      option(value='SD') South Dakota
+      option(value='TN') Tennessee
+      option(value='TX') Texas
+      option(value='UT') Utah
+      option(value='VT') Vermont
+      option(value='VA') Virginia
+      option(value='WA') Washington
+      option(value='WV') West Virginia
+      option(value='WI') Wisconsin
+      option(value='WY') Wyoming
+      option(value='AS') American Samoa
+      option(value='DC') District of Columbia
+      option(value='FM') Federated States of Micronesia
+      option(value='GU') Guam
+      option(value='MH') Marshall Islands
+      option(value='MP') Northern Mariana Islands
+      option(value='PW') Palau
+      option(value='PR') Puerto Rico
+      option(value='VI') Virgin Islands
+      option(value='AE') Armed Forces Africa
+      option(value='AA') Armed Forces Americas
+      option(value='AEC') Armed Forces Canada
+      option(value='AEE') Armed Forces Europe
+      option(value='AEM') Armed Forces Middle East
+      option(value='AP') Armed Forces Pacific
+    br
+    label(for='city2') What city did you work in?
+    br
+    input(id='city2', type='text', name='city2',  placeholder='Dinotopia')
+    br
+    label(for='duties2') Please briefly describe your duties.
+    br
+    textarea(id='duties2', form='form', name='duties2', rows='4', cols='50', placeholder='Breathe Deep Seek Peace.  Be Excellent To Each Other.  Etc...')
+    br
+    h4 Final position, (optional):
+    br
+    label(for='job3') What was your job title?
+    br
+    input(id='job3', type='text', name='job3', placeholder='Chief of Awesome')
+    br
+    label(for='employer3') What was the name of your employer?
+    br
+    input(id='employer3', type='text', name='employer3', placeholder='The Good Company')
+    br
+    label(for='state3') What state did you work in?
+    br
+    select(id='state3', name='state3')
+      option(value='0') Select One:
+      option(value='AL') Alabama
+      option(value='AK') Alaska
+      option(value='AZ') Arizona
+      option(value='AR') Arkansas
+      option(value='CA') California
+      option(value='CO') Colorado
+      option(value='CT') Connecticut
+      option(value='DE') Delaware
+      option(value='FL') Florida
+      option(value='GA') Georgia
+      option(value='HI') Hawaii
+      option(value='ID') Idaho
+      option(value='IL') Illinois
+      option(value='IN') Indiana
+      option(value='IA') Iowa
+      option(value='KS') Kansas
+      option(value='KY') Kentucky
+      option(value='LA') Louisiana
+      option(value='ME') Maine
+      option(value='MD') Maryland
+      option(value='MA') Massachusetts
+      option(value='MI') Michigan
+      option(value='MN') Minnesota
+      option(value='MS') Mississippi
+      option(value='MO') Missouri
+      option(value='MT') Montana
+      option(value='NE') Nebraska
+      option(value='NV') Nevada
+      option(value='NH') New Hampshire
+      option(value='NJ') New Jersey
+      option(value='NM') New Mexico
+      option(value='NY') New York
+      option(value='NC') North Carolina
+      option(value='ND') North Dakota
+      option(value='OH') Ohio
+      option(value='OK') Oklahoma
+      option(value='OR') Oregon
+      option(value='PA') Pennsylvania
+      option(value='RI') Rhode Island
+      option(value='SC') South Carolina
+      option(value='SD') South Dakota
+      option(value='TN') Tennessee
+      option(value='TX') Texas
+      option(value='UT') Utah
+      option(value='VT') Vermont
+      option(value='VA') Virginia
+      option(value='WA') Washington
+      option(value='WV') West Virginia
+      option(value='WI') Wisconsin
+      option(value='WY') Wyoming
+      option(value='AS') American Samoa
+      option(value='DC') District of Columbia
+      option(value='FM') Federated States of Micronesia
+      option(value='GU') Guam
+      option(value='MH') Marshall Islands
+      option(value='MP') Northern Mariana Islands
+      option(value='PW') Palau
+      option(value='PR') Puerto Rico
+      option(value='VI') Virgin Islands
+      option(value='AE') Armed Forces Africa
+      option(value='AA') Armed Forces Americas
+      option(value='AEC') Armed Forces Canada
+      option(value='AEE') Armed Forces Europe
+      option(value='AEM') Armed Forces Middle East
+      option(value='AP') Armed Forces Pacific
+    br
+    label(for='city3') What city did you work in?
+    br
+    input(id='city3', type='text', name='city3',  placeholder='Dinotopia')
+    br
+    label(for='duties3') Please briefly describe your duties.
+    br
+    textarea(id='duties3', form='form', name='duties3', rows='4', cols='50', placeholder='Breathe Deep Seek Peace.  Be Excellent To Each Other.  Etc...')
+    br
+    label(for='submit') Did you double check everything?
+    br
+    input(type='submit' value='Submit')
