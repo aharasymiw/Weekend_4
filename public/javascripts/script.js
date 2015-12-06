@@ -12,15 +12,7 @@ $(function() {
     $(this)[0].reset();
 
     console.log(data);
-    /*
-        console.log(formData);
-        var data = {};
-        console.log(this);
-        $(this).serializeArray().map(function(e) {data[e.name] = e.value;});
-        console.log(this);
-    */
-    /*      console.log(this);
-*/
+
     $.ajax({
       url: '/applicant',
       method: 'POST',
