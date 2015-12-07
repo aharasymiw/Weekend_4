@@ -1,5 +1,126 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+
+  script(src='/javascripts/admin_scripts.js')
+
+  section(id='search')
+    h2 Search Criteria
+    p (Select any or all search criteria, none of them are required.)
+    form(id='form')
+      label(for='fname') Search applicants with first name matching:
+      br
+      input(id='fname', type='text', name='fname', placeholder='John', autofocus)
+      br
+      label(for='lname') Search applicants with last name matching:
+      br
+      input(id='lname', type='text', name='lname', placeholder='Doe')
+      br
+      br
+      h4 Search for applicants who want work located at:  
+      label(for='remote') Remote
+      input(id='remote', type='radio', name='location', value='remote')
+      label(for='specific') Specific
+      input(id='specific', type='radio', name='location', value='specific')
+      br
+      label(for='state') Search for applicants looking for work in a specific state:
+      br
+      select(id='state', name='state')
+        option(value='0') Select One:
+        option(value='AL') Alabama
+        option(value='AK') Alaska
+        option(value='AZ') Arizona
+        option(value='AR') Arkansas
+        option(value='CA') California
+        option(value='CO') Colorado
+        option(value='CT') Connecticut
+        option(value='DE') Delaware
+        option(value='FL') Florida
+        option(value='GA') Georgia
+        option(value='HI') Hawaii
+        option(value='ID') Idaho
+        option(value='IL') Illinois
+        option(value='IN') Indiana
+        option(value='IA') Iowa
+        option(value='KS') Kansas
+        option(value='KY') Kentucky
+        option(value='LA') Louisiana
+        option(value='ME') Maine
+        option(value='MD') Maryland
+        option(value='MA') Massachusetts
+        option(value='MI') Michigan
+        option(value='MN') Minnesota
+        option(value='MS') Mississippi
+        option(value='MO') Missouri
+        option(value='MT') Montana
+        option(value='NE') Nebraska
+        option(value='NV') Nevada
+        option(value='NH') New Hampshire
+        option(value='NJ') New Jersey
+        option(value='NM') New Mexico
+        option(value='NY') New York
+        option(value='NC') North Carolina
+        option(value='ND') North Dakota
+        option(value='OH') Ohio
+        option(value='OK') Oklahoma
+        option(value='OR') Oregon
+        option(value='PA') Pennsylvania
+        option(value='RI') Rhode Island
+        option(value='SC') South Carolina
+        option(value='SD') South Dakota
+        option(value='TN') Tennessee
+        option(value='TX') Texas
+        option(value='UT') Utah
+        option(value='VT') Vermont
+        option(value='VA') Virginia
+        option(value='WA') Washington
+        option(value='WV') West Virginia
+        option(value='WI') Wisconsin
+        option(value='WY') Wyoming
+        option(value='AS') American Samoa
+        option(value='DC') District of Columbia
+        option(value='FM') Federated States of Micronesia
+        option(value='GU') Guam
+        option(value='MH') Marshall Islands
+        option(value='MP') Northern Mariana Islands
+        option(value='PW') Palau
+        option(value='PR') Puerto Rico
+        option(value='VI') Virgin Islands
+        option(value='AE') Armed Forces Africa
+        option(value='AA') Armed Forces Americas
+        option(value='AEC') Armed Forces Canada
+        option(value='AEE') Armed Forces Europe
+        option(value='AEM') Armed Forces Middle East
+        option(value='AP') Armed Forces Pacific
+      br
+      label(for='city') Search for applicants looking for work in a specific city:
+      br
+      input(id='city', type='text', name='city', placeholder='Atlantis')
+      br
+      h4 Search for applicants with skills that match:
+      br
+      label(for='reading') Reading: 
+      input(id='reading', type='checkbox', name='')
+      br
+      label(for='writing') Writing:
+      input(id='writing', type='checkbox', name='writing')
+      br
+      label(for='rithmetic') Rithmetic:
+      input(id='rithmetic', type='checkbox', name='rithmetic')
+      br
+      label(for='submit') Did you double check everything?
+      br
+      input(type='submit' value='Search')
+
+  section(id='display')
+    h2 results
+    p (Showing the 5 most recient applicants by default.)
+    table#results
+      tr
+        th First Name
+        th Last Name
+        th Desired Location
+        th Last Employer
+        th Reading
+        th Writing
+        th Rithmetic

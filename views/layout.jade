@@ -1,23 +1,20 @@
 doctype html
 html(lang='en')
   head
-    title Rando Corp
+    title= title
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width, initial-scale-=1')
     link(rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
     link(rel='stylesheet', href='/stylesheets/style.css')
     script(src='https://code.jquery.com/jquery-2.1.4.min.js')
-    script(src='/javascripts/script.js')
-    
+
   body
-    wrapper
+    main
       header
-        h1 Rando Corp
-        a(href='/')
-          button 'Applicant View'
-        a(href='/admin')
-          button 'Admin View'
-      
+        h1= title
+        a
+          button= buttonText
+
       content
         block content
 

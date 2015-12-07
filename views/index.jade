@@ -2,6 +2,8 @@ extends layout
 
 block content
 
+  script(src='/javascripts/index_scripts.js')
+
   h2 Please fill out an application.
 
   form(id='form', autocomplete='on')
@@ -24,7 +26,7 @@ block content
       option(value='job5') Job 5
       option(value='job6') Job 6
     br
-    p Where do you want to work?  
+    h4 Where do you want to work?  
     label(for='remote') Remote
     input(id='remote', type='radio', name='location', value='remote', checked)
     label(for='specific') Specific
@@ -369,6 +371,17 @@ block content
     label(for='duties3') Please briefly describe your duties.
     br
     textarea(id='duties3', form='form', name='duties3', rows='4', cols='50', placeholder='Breathe Deep Seek Peace.  Be Excellent To Each Other.  Etc...')
+    br
+    h4 Please identify which skills you have, that will help you in your new roll.
+    br
+    label(for='reading') Reading: 
+    input(id='reading', type='checkbox', name='')
+    br
+    label(for='writing') Writing:
+    input(id='writing', type='checkbox', name='writing')
+    br
+    label(for='rithmetic') Rithmetic:
+    input(id='rithmetic', type='checkbox', name='rithmetic')
     br
     label(for='submit') Did you double check everything?
     br
